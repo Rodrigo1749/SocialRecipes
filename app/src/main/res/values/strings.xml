@@ -22,4 +22,5 @@
     <string name="eslogan_Inicio">Comienza a crear tus recetas</string>
     <string name="activity_main_password_validate">El campo contraseña debe contener almenos 8 caracteres</string>
     <string name="activity_main_email_validate">El correo electronico no contiene un formato correcto</string>
+    <string name="activity_main_usuario_validate">El nombre de usuario no debe estar vacio</string>
 </resources>

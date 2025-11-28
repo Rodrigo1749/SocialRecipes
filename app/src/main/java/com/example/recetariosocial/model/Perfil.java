@@ -15,6 +15,8 @@ public class Perfil {
        // @ForeignKey()
         public int idUsuario;
 
+        @ColumnInfo(name = "nombreDeUsuario")
+        public String nombreDeUsuario;
         @ColumnInfo(name = "correo")
         public String correo;
 

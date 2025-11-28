@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     private void setupClickListener(){
         btnLogin.setOnClickListener(view -> {
+
             String email = etEmail.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
 
