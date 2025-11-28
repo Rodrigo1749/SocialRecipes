@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RecetarioSocial" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/app</item>
+        <item name="colorPrimaryVariant">@color/verde</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorOnSecondary">@color/negro</item>
+    </style>
+</resources>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingClass">
+            <ImageView
+                android:id="@+id/ivReceta"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Imagen de receta"
+                android:src="@drawable/receta"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivAutor"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Foto de perfil"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@id/ivReceta"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewAuthor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/por_usuario"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toTopOf="@id/ivAutor"
+                app:layout_constraintBottom_toBottomOf="@id/ivAutor"
+                app:layout_constraintStart_toEndOf="@id/ivAutor"
+                app:layout_constraintEnd_toStartOf="@id/btnSeguir"
+                app:layout_constraintHorizontal_chainStyle="spread" />
+
+            <Button
+                android:id="@+id/btnSeguir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seguir"
+                android:textSize="12sp"
+                android:backgroundTint="@color/app"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="@id/ivAutor"
+                app:layout_constraintBottom_toBottomOf="@id/ivAutor"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTituloDeLaReceta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_de_la_receta"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@id/ivAutor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDescripcion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTituloDeLaReceta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/m_xico_estado"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvDescripcion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvContadorDeFavoritos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0 favoritos"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewLocation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnFavoritos" />
+
+    <Button
+        android:id="@+id/btnFavoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/app"
+        android:paddingEnd="16dp"
+        android:text="@string/btn_agregar_a_favoritos"
+        app:layout_constraintBottom_toBottomOf="@id/tvContadorDeFavoritos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvContadorDeFavoritos" />
+
+            <TextView
+                android:id="@+id/tvTextoIngredientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredientes"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvContadorDeFavoritos"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvIngredientes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTextoIngredientes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTituloDelPaso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pasos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@id/rvIngredientes"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPasos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTituloDelPaso"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTituloDeComentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comentarios"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@id/rvPasos"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/etComentario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/escribe_un_comentario"
+                android:inputType="textMultiLine"
+                android:minLines="1"
+                android:maxLines="3"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTituloDeComentarios"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnAgregarComentario"
+                />
+
+            <Button
+                android:id="@+id/btnAgregarComentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_enviar"
+                android:backgroundTint="@color/app"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toTopOf="@id/etComentario"
+                app:layout_constraintBottom_toBottomOf="@id/etComentario"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvComentarios"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintTop_toBottomOf="@id/btnAgregarComentario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>

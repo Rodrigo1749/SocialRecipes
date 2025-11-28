@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Inicio">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="815dp"
+        android:layout_height="415dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sombreros" />
+
+    <Button
+        android:id="@+id/btnInicioSesion"
+        android:layout_width="172dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/app"
+        android:text="@string/iniciar_sesion_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="172dp"
+        android:layout_height="53dp"
+        android:backgroundTint="@color/app"
+        android:text="@string/registrarse_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInicioSesion"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <TextView
+        android:id="@+id/tvTextoInicio"
+        android:layout_width="310dp"
+        android:layout_height="143dp"
+        android:text="@string/eslogan_Inicio"
+        android:textColor="@color/app"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnInicioSesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.455" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

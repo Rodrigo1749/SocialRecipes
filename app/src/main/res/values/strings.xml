@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Recetario Social</string>
+    <string name="introduce_el_titulo_de_la_receta">Introduce el titulo de la receta</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="toca_para_seleccionar_imagen">Toca para seleccionar imagen</string>
+    <string name="estado">Estado</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="agregar_ingrediente">Agregar Ingrediente</string>
+    <string name="pasos">Pasos</string>
+    <string name="agregar_paso">Agregar Paso</string>
+    <string name="crear_receta">Crear Receta</string>
+    <string name="por_usuario">Por: Usuario</string>
+    <string name="seguir">Seguir</string>
+    <string name="titulo_de_la_receta">Título de la Receta</string>
+    <string name="m_xico_estado">México, Estado</string>
+    <string name="btn_agregar_a_favoritos">Agregar a Favoritos</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="escribe_un_comentario">Escribe un comentario...</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="iniciar_sesion_btn">Iniciar Sesion</string>
+    <string name="registrarse_btn">Registrarse</string>
+    <string name="eslogan_Inicio">Comienza a crear tus recetas</string>
+</resources>
