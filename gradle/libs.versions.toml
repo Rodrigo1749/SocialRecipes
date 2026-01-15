@@ -8,8 +8,8 @@ material = "1.13.0"
 activity = "1.11.0"
 constraintlayout = "2.2.1"
 recyclerview = "1.4.0"
-roomCommonJvm = "2.8.4"
-roomRuntimeJvm = "2.8.4"
+roomCommonJvm = "2.6.1"
+roomRuntimeJvm = "2.6.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -20,9 +20,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
-room-common-jvm = { group = "androidx.room", name = "room-common-jvm", version.ref = "roomCommonJvm" }
-room-runtime-jvm = { group = "androidx.room", name = "room-runtime-jvm", version.ref = "roomRuntimeJvm" }
+room-common-jvm = { group = "androidx.room", name = "room-common", version.ref = "roomCommonJvm" }
+room-runtime-jvm = { group = "androidx.room", name = "room-runtime", version.ref = "roomRuntimeJvm" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCommonJvm" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-

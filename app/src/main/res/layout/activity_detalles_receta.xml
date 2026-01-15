@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:ignore="MissingClass">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/ivReceta"
                 android:layout_width="0dp"
@@ -38,16 +48,32 @@
                 app:layout_constraintTop_toTopOf="@id/ivAutor"
                 app:layout_constraintBottom_toBottomOf="@id/ivAutor"
                 app:layout_constraintStart_toEndOf="@id/ivAutor"
-                app:layout_constraintEnd_toStartOf="@id/btnSeguir"
-                app:layout_constraintHorizontal_chainStyle="spread" />
+                app:layout_constraintEnd_toStartOf="@id/btnEditarReceta"
+                app:layout_constraintHorizontal_chainStyle="spread_inside" />
 
             <Button
-                android:id="@+id/btnSeguir"
+                android:id="@+id/btnEditarReceta"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/seguir"
-                android:textSize="12sp"
-                android:backgroundTint="@color/app"
+                android:layout_marginEnd="8dp"
+                android:text="@string/btn_editar"
+                android:textColor="@color/verde"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/ivAutor"
+                app:layout_constraintEnd_toStartOf="@id/btnEliminarReceta"
+                app:layout_constraintTop_toTopOf="@id/ivAutor" />
+
+            <Button
+                android:id="@+id/btnEliminarReceta"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_eliminar"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone"
+                tools:visibility="visible"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintTop_toTopOf="@id/ivAutor"
                 app:layout_constraintBottom_toBottomOf="@id/ivAutor"
@@ -84,7 +110,7 @@
                 android:id="@+id/textViewLocation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/m_xico_estado"
+                android:text="@string/mexico_estado"
                 android:textSize="14sp"
                 android:textColor="@android:color/darker_gray"
                 android:paddingStart="16dp"
@@ -93,28 +119,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
-            <TextView
-                android:id="@+id/tvContadorDeFavoritos"
-                android:layout_width="0dp"
+            <Button
+                android:id="@+id/btnFavoritos"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0 favoritos"
-                android:textSize="14sp"
-                android:paddingStart="16dp"
-                android:paddingEnd="8dp"
-                app:layout_constraintTop_toBottomOf="@id/textViewLocation"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/btnFavoritos" />
-
-    <Button
-        android:id="@+id/btnFavoritos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/app"
-        android:paddingEnd="16dp"
-        android:text="@string/btn_agregar_a_favoritos"
-        app:layout_constraintBottom_toBottomOf="@id/tvContadorDeFavoritos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvContadorDeFavoritos" />
+                android:backgroundTint="@color/app"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/btn_agregar_a_favoritos"
+                app:layout_constraintBottom_toBottomOf="@id/textViewLocation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textViewLocation" />
 
             <TextView
                 android:id="@+id/tvTextoIngredientes"
@@ -127,7 +142,7 @@
                 android:paddingEnd="16dp"
                 android:paddingTop="16dp"
                 android:paddingBottom="8dp"
-                app:layout_constraintTop_toBottomOf="@id/tvContadorDeFavoritos"
+                app:layout_constraintTop_toBottomOf="@id/textViewLocation"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -213,3 +228,7 @@
                 app:layout_constraintBottom_toBottomOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

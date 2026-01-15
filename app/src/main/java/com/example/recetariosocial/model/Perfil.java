@@ -1,30 +1,20 @@
 package com.example.recetariosocial.model;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.ForeignKey;
-import androidx.room.PrimaryKey;
+import com.google.gson.annotations.SerializedName;
 
-
-@Entity(tableName = "Perfiles")
 public class Perfil {
 
-        @PrimaryKey(autoGenerate = true)
-        public int idPerfil;
+    @SerializedName("idPerfil")
+    public Integer idPerfil;
+    @SerializedName("idUsuario")
+    public Integer idUsuario;
+    // Se envía "nombre_de_usuario" para coincidir con la BD
+    @SerializedName("nombre_de_usuario")
+    public String nombreDeUsuario;
 
-       // @ForeignKey()
-        public int idUsuario;
-
-        @ColumnInfo(name = "nombreDeUsuario")
-        public String nombreDeUsuario;
-        @ColumnInfo(name = "correo")
-        public String correo;
-
-        @ColumnInfo(name = "contraseña")
-        public String contraseña;
-
-        @ColumnInfo(name = "biografia")
-        public String biografia;
-
-    }
-
+    @SerializedName("nombre")
+    public String nombre;
+    public String correo;
+    public String contraseña;
+    public String biografia;
+}

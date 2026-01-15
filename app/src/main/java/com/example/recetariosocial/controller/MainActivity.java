@@ -1,4 +1,4 @@
-package com.example.recetariosocial;
+package com.example.recetariosocial.controller;
 
 import androidx.core.graphics.Insets;
 
@@ -12,20 +12,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.recetariosocial.R;
+
 public class MainActivity extends AppCompatActivity {
 
 
     private Button btnInicioSesion, btnRegistrarse;
 
+    // Método principal que se llama al crear la actividad.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_inicio);
 
+        // Inicializa los botones de la pantalla de bienvenida
         btnInicioSesion = findViewById(R.id.btnInicioSesion);
         btnRegistrarse = findViewById(R.id.btnRegistrarse);
 
+        // Configura el listener para navegar a la pantalla de Login
         btnInicioSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
            });
 
+        // Configura el listener para navegar a la pantalla de Registro
         btnRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        // Ajusta el padding de la vista para que no se solape con las barras del sistema (Edge-to-Edge)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.Inicio), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

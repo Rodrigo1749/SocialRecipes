@@ -1,19 +1,18 @@
 package com.example.recetariosocial.model;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+import com.google.gson.annotations.SerializedName;
 
-@Entity(tableName = "Usuarios")
 public class Usuario {
 
-    @PrimaryKey(autoGenerate = true)
-    public int idUsuario;
-
-    @ColumnInfo(name = "correo")
+    @SerializedName(value = "idUsuario", alternate = {"id"})
+    public Integer idUsuario;
+    
+    @SerializedName("correo")
     public String correo;
-
-    @ColumnInfo(name = "contraseña")
+    
+    @SerializedName("contraseña")
     public String contraseña;
 
+    @SerializedName("nombre")
+    public String nombre;
 }
